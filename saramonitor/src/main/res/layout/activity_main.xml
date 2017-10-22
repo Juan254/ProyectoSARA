@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="co.edu.uniquindio.android.electiva.saramonitor.activity.MainActivity">
+
+    <include layout="@layout/toolbar" android:id="@+id/tool_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/logo"
+            android:src="@drawable/saramonitorlogo"
+            android:layout_marginBottom="20pt"
+            android:contentDescription="@string/logoDescripcion"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtUsuario"
+            android:hint="@string/usuario"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="10pt"
+            android:layout_marginRight="15pt"
+            android:layout_marginLeft="15pt"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtContraseña"
+            android:hint="@string/Contraseña"
+            android:inputType="textPassword"
+            android:layout_marginBottom="20pt"
+            android:layout_marginRight="15pt"
+            android:layout_marginLeft="15pt"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:background="@color/colorU"
+            android:layout_marginRight="15pt"
+            android:layout_marginLeft="15pt">
+
+            <Button
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:duplicateParentState="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Login"
+                android:background="@color/colorU"
+                android:id="@+id/btnLogin"
+                android:textColor="@android:color/white"
+                android:drawablePadding="6dp"
+                android:drawableStart="@drawable/ic_input_white_18dp"
+                android:onClick="pasarACitas"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="co.edu.uniquindio.android.electiva.saramonitor.activity.CitasActivity">
+
+    <include layout="@layout/toolbar" android:id="@+id/tool_bar"/>
+
+    <fragment
+        android:id="@+id/fragment_lista_citas"
+        class="co.edu.uniquindio.android.electiva.saramonitor.fragments.ListaDeCitasFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
