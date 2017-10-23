@@ -46,8 +46,7 @@ public class DetalleCitaFragment extends Fragment {
     }
 
     public void mostrarCita(Citas cita){
-        myToolbar = (Toolbar) getView().findViewById(R.id.tool_bar);
-        myToolbar.setTitle("Detalle de la cita");
+
         cedula = (TextView) getView().findViewById(R.id.txt_cedula);
         cedula.setText(cita.getCedula());
         nombre = (TextView) getView().findViewById(R.id.txt_nombre);
