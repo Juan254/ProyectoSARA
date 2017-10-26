@@ -1,18 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+
     tools:context="co.edu.uniquindio.android.electiva.proyectosara.activity.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/toolbar" android:id="@+id/tool_bar"/>
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/logo"
+            android:src="@drawable/saraadminlogo"
+            android:layout_marginBottom="20pt"
+            android:contentDescription="@string/logoDescripcion"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtUsuario"
+            android:hint="@string/usuario"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="10pt"
+            android:layout_marginRight="15pt"
+            android:layout_marginLeft="15pt"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtContraseña"
+            android:hint="@string/Contraseña"
+            android:inputType="textPassword"
+            android:layout_marginBottom="20pt"
+            android:layout_marginRight="15pt"
+            android:layout_marginLeft="15pt"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            style="?android:attr/buttonStyle"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15pt"
+            android:layout_marginLeft="15pt"
+            android:background="@color/colorU"
+            android:onClick="">
+
+            <TextView
+                style="?android:attr/buttonStyle"
+                android:layout_centerInParent="true"
+                android:duplicateParentState="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="@string/Login"
+                android:background="@null"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/txtLogin"
+                android:textColor="@android:color/white"
+                android:drawableStart="@drawable/ic_input_white_18dp"
+                android:onClick="" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

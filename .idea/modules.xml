@@ -3,10 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ProyectoSARA.iml" filepath="$PROJECT_DIR$/ProyectoSARA.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ProyectoSARA.iml" filepath="$PROJECT_DIR$/ProyectoSARA.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/saramonitor/saramonitor.iml" filepath="$PROJECT_DIR$/saramonitor/saramonitor.iml" />
       <module fileurl="file://$PROJECT_DIR$/saramonitor/saramonitor.iml" filepath="$PROJECT_DIR$/saramonitor/saramonitor.iml" />
     </modules>
   </component>
