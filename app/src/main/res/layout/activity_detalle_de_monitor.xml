@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:id= "@+id/fragmento_detalle_monitor"
+    class="co.edu.uniquindio.android.electiva.proyectosara.fragments.DetalleDeMonitorFragment"
+    android:layout_width= "match_parent"
+    android:layout_height= "match_parent" />

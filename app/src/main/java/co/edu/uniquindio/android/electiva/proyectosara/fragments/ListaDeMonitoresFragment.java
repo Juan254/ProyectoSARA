@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import java.util.ArrayList;
 
 import co.edu.uniquindio.android.electiva.proyectosara.R;
+import co.edu.uniquindio.android.electiva.proyectosara.activity.MonitorActivity;
 import co.edu.uniquindio.android.electiva.proyectosara.util.AdaptadorMonitor;
 import co.edu.uniquindio.android.electiva.proyectosara.vo.Monitor;
 
@@ -80,6 +81,13 @@ public class ListaDeMonitoresFragment extends Fragment implements AdaptadorMonit
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
+
+        if(id == R.id.menu_agregar){
+
+            ((MonitorActivity) getActivity()).mostrarDialogoAgregarPersonaje(ListaDeMonitoresFragment.class.getName(), adaptadorMonitor);
+        }
+
+
 
         return super.onOptionsItemSelected(item);
     }

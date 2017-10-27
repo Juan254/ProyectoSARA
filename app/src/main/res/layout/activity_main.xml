@@ -51,7 +51,7 @@
             android:layout_marginRight="15pt"
             android:layout_marginLeft="15pt"
             android:background="@color/colorU"
-            android:onClick="">
+            android:onClick="pasarAMonitores">
 
             <TextView
                 style="?android:attr/buttonStyle"
