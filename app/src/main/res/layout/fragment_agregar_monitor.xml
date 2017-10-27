@@ -1,0 +1,170 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="co.edu.uniquindio.android.electiva.proyectosara.fragments.AgregarMonitorFragment">
+
+    <include layout="@layout/toolbar" android:id="@id/tool_bar"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:contentDescription="Imagen para capturar la foto del monitor"
+        android:background="@mipmap/ic_camera_alt_black_48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/capturar_fotografia"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="115dp"
+        android:textColor="@color/colorNegro"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/editTextCedula"
+                    android:layout_width="360dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/cedula_monitor" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="180dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/editTextNombreMonitor"
+                    android:layout_width="360dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/nombre_monitor" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="230dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/editTextNombreUsuario"
+                    android:layout_width="360dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/nombre_usuario_monitor" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="280dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/editTextContrasenia"
+                    android:layout_width="360dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="@string/Contraseña" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="330dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/editTextTelefono"
+                    android:layout_width="360dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/telefono_monitor" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="380dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/editTextSemestre"
+                    android:layout_width="360dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/semestre_monitor" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="430dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/editTextLineaMonitoria"
+                    android:layout_width="360dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/ordenar_por_linea_monitoria" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="480dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/editTextLugarAtencion"
+                    android:layout_width="360dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lugar_atencion" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnHoraAtencion"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/hora_atencion"
+                android:layout_marginTop="530dp"/>
+
+            <Button
+                android:layout_width="360dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnAgregarMonitor"
+                android:text="@string/crear_Monitor"
+                android:layout_marginTop="580dp"
+                android:textColor="@color/cardview_light_background"
+                android:background="@color/colorU" />
+
+
+        </FrameLayout>
+
+    </ScrollView>
+
+</FrameLayout>

@@ -20,6 +20,19 @@
     <string name="terminar_cita">Terminar Cita</string>
     <string name="inasistencia">No asistió el estudiante</string>
     <string name="sara_admin">S.A.R.A. Admin</string>
+    <string name="cambiar_idioma">Cambiar idioma</string>
+    <string name="eliminar_monitor">Eliminar monitor</string>
+    <string name="agregar_monitor">Agregar monitor</string>
+    <string name="ordenar_por_linea_monitoria">Línea de monitoría</string>
+    <string name="capturar_fotografia">Capturar Fotografía</string>
+    <string name="nombre_monitor">Nombre del monitor</string>
+    <string name="cedula_monitor">Cédula</string>
+    <string name="nombre_usuario_monitor">Nombre de usuario</string>
+    <string name="telefono_monitor">Teléfono</string>
+    <string name="hora_atencion">Hora de atención</string>
+    <string name="crear_Monitor">Crear Monitor</string>
+    <string name="semestre_monitor">Semestre</string>
+    <string name="lugar_atencion">Lugar de atención</string>
 
 
     <string-array name="estados">
