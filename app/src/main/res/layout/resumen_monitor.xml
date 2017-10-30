@@ -14,7 +14,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp">
+        android:layout_margin="16dp"
+        >
 
         <ImageView
             android:id="@+id/fotoMonitor"
@@ -23,11 +24,12 @@
             android:background="#00FF00"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="16dp" />
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Imageview que representa la foto del monitor"/>
 
         <TextView
             android:id="@+id/nombreMonitor"
-            android:text="Nombre"
+            android:text="@string/nombre_monitor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -36,7 +38,7 @@
 
         <TextView
             android:id="@+id/lineaMonitoria"
-            android:text="Línea Monitoría"
+            android:text="@string/monitoria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nombreMonitor"

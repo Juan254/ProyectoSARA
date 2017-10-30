@@ -17,11 +17,11 @@ import co.edu.uniquindio.android.electiva.proyectosara.fragments.ListaDeMonitore
 import co.edu.uniquindio.android.electiva.proyectosara.util.AdaptadorMonitor;
 import co.edu.uniquindio.android.electiva.proyectosara.vo.Monitor;
 
-public class MonitorActivity extends AppCompatActivity {
+public class MonitorActivity extends AppCompatActivity implements ListaDeMonitoresFragment.onMonitorSeleccionadoListener {
 
     private ArrayList<Monitor> monitores;
-    private Toolbar myToolbar;
     private DetalleDeMonitorFragment fragmentoDetalle;
+    private Toolbar toolbar;
 
 
     @Override
@@ -29,8 +29,8 @@ public class MonitorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monitor);
 
-        myToolbar = (Toolbar) findViewById(R.id.tool_bar);
-        myToolbar.setTitle("Lista de Monitores");
+        toolbar = (Toolbar) findViewById(R.id.toolbarp);
+        setSupportActionBar(toolbar);
 
         monitores = new ArrayList<>();
         monitores.add(new Monitor(1,123,6,1,2,"monitor 1", "monitor",
@@ -67,14 +67,15 @@ public class MonitorActivity extends AppCompatActivity {
 
     }
 
-    public void onMonitorSeleccionado(int posicion){
 
+    @Override
+    public void onMonitorSeleccionadoListener(int posision) {
         if(fragmentoDetalle==null){
-            Intent intent = new Intent(this, DetalleDeMonitorFragment.class);
-            intent.putExtra("monitor", monitores.get(posicion));
+            Intent intent = new Intent(this, DetalleDeMonitorActivity.class);
+            intent.putExtra("monitor", monitores.get(posision));
             startActivity(intent);
         }else {
-            fragmentoDetalle.mostrarMonitor(monitores.get(posicion));
+            fragmentoDetalle.mostrarMonitor(monitores.get(posision));
         }
     }
 }

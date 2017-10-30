@@ -48,13 +48,13 @@ public class ListaDeMonitoresFragment extends Fragment implements AdaptadorMonit
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+    public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
         recyclerView = (RecyclerView) getView().findViewById(R.id.listaMonitores);
@@ -95,12 +95,12 @@ public class ListaDeMonitoresFragment extends Fragment implements AdaptadorMonit
     @Override
     public void onClickPosicion(int posicion) {
 
-        listener.onMonitorSeleccionado(posicion);
+        listener.onMonitorSeleccionadoListener(posicion);
 
     }
 
     public interface onMonitorSeleccionadoListener{
-        void onMonitorSeleccionado(int posision);
+        void onMonitorSeleccionadoListener(int posision);
     }
 
     public ArrayList<Monitor> getMonitores() {

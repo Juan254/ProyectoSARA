@@ -69,7 +69,7 @@
                 android:id="@+id/txtLogin"
                 android:textColor="@android:color/white"
                 android:drawableStart="@drawable/ic_input_white_18dp"
-                android:onClick="" />
+                android:onClick="pasarAMonitores" />
         </FrameLayout>
 
     </LinearLayout>

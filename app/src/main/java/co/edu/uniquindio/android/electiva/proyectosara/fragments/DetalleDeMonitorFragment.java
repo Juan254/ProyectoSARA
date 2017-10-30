@@ -40,6 +40,7 @@ public class DetalleDeMonitorFragment extends Fragment {
 
         this.monitor = monitor;
         txtNombre = (TextView) getView().findViewById(R.id.txtNombreMonitor);
+        txtNombre.setText(monitor.getNombre());
         txtNombreUsuario = (TextView) getView().findViewById(R.id.txtNombreUsuario);
         txtNumTel = (TextView) getView().findViewById(R.id.txtTelefono);
         txtLineaMonitoria = (TextView) getView().findViewById(R.id.txtLineaMonitoria);
