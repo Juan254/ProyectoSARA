@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SaraAdmin</string>
     <string name="usuario">Usuario</string>
-    <string name="Contraseña">*************</string>
+    <string name="Contraseña">Contraseña</string>
     <string name="Login">Inicar Sesión</string>
     <string name="logoDescripcion">Logo de la aplicación</string>
     <string name="sara_monitor">S.A.R.A. : Monitor</string>
@@ -33,6 +33,8 @@
     <string name="crear_Monitor">Crear Monitor</string>
     <string name="semestre_monitor">Semestre</string>
     <string name="lugar_atencion">Lugar de atención</string>
+    <string name="descripcion_camera">Imagen para capturar la foto del monitor</string>
+    <string name="mensaje_agregar_error">Debe de llenar todos los campos, son obligatorios</string>
 
 
     <string-array name="estados">

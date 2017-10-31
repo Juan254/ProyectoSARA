@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -76,23 +77,31 @@ public class AgregarMonitorFragment extends DialogFragment implements View.OnCli
     public void onClick(View view) {
 
         if(view.getId() == btnAgregarMonitor.getId()){
+            if (cedulaEdit.getText().toString().isEmpty() ||nombreEdit.getText().toString().isEmpty()
+                    || contraseniaEdit.getText().toString().isEmpty() ||
+                    telefonoEdit.getText().toString().isEmpty()||
+                    semestreEdit.getText().toString().isEmpty() ||
+                    lineaMonitoriaEdit.getText().toString().isEmpty() ||
+                    lugarAtencionEdit.getText().toString().isEmpty()){
 
-            int cedula = Integer.parseInt(cedulaEdit.getText().toString());
-            String nombre = nombreEdit.getText().toString();
-            String nombreUsuario = nombreUsuarioEdit.getText().toString();
-            String contra = contraseniaEdit.getText().toString();
-            int tel = Integer.parseInt(telefonoEdit.getText().toString());
-            int semestre = Integer.parseInt(semestreEdit.getText().toString());
-            String lineaMonitoria = lineaMonitoriaEdit.getText().toString();
-            String lugarAtencion = lugarAtencionEdit.getText().toString();
+                Toast.makeText(getActivity(), R.string.mensaje_agregar_error,
+                        Toast.LENGTH_LONG).show();
+            }else {
+                int cedula = Integer.parseInt(cedulaEdit.getText().toString());
+                String nombre = nombreEdit.getText().toString();
+                String nombreUsuario = nombreUsuarioEdit.getText().toString();
+                String contra = contraseniaEdit.getText().toString();
+                int tel = Integer.parseInt(telefonoEdit.getText().toString());
+                int semestre = Integer.parseInt(semestreEdit.getText().toString());
+                String lineaMonitoria = lineaMonitoriaEdit.getText().toString();
+                String lugarAtencion = lugarAtencionEdit.getText().toString();
+                lista.add(0, new Monitor(cedula, tel, semestre, 0, 0, nombre,
+                        nombreUsuario, contra, lugarAtencion,
+                        lineaMonitoria, null, false));
 
-            lista.add(0, new Monitor(cedula, tel, semestre, 0, 0, nombre,
-                    nombreUsuario, contra, lugarAtencion,
-                    lineaMonitoria, null, false));
-
-            adaptador.notifyItemInserted(0);
-            getDialog().dismiss();
-
+                adaptador.notifyItemInserted(0);
+                getDialog().dismiss();
+            }
         }
 
         if(view.getId() == btnHoraAtencion.getId()){
