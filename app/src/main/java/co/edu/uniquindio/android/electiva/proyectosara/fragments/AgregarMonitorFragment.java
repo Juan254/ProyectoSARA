@@ -1,6 +1,9 @@
 package co.edu.uniquindio.android.electiva.proyectosara.fragments;
 
 
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
@@ -9,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.text.DateFormat;
@@ -31,9 +36,11 @@ public class AgregarMonitorFragment extends DialogFragment implements View.OnCli
     private AdaptadorMonitor adaptador;
     private Date horaSeleccionada;
     private Button btnAgregarMonitor, btnHoraAtencion;
+    private ImageButton btnCamara;
     private EditText cedulaEdit, nombreEdit, nombreUsuarioEdit, contraseniaEdit,
                      telefonoEdit, semestreEdit, lineaMonitoriaEdit, lugarAtencionEdit;
-
+    private static final int CAMERA_REQUEST = 1888;
+    private ImageView imageView;
 
 
 
@@ -41,6 +48,14 @@ public class AgregarMonitorFragment extends DialogFragment implements View.OnCli
         // Required empty public constructor
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+            Bitmap photo = (Bitmap) data.getExtras().get("data");
+            imageView.setImageBitmap(photo);
+        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,6 +76,9 @@ public class AgregarMonitorFragment extends DialogFragment implements View.OnCli
         btnHoraAtencion = getView().findViewById(R.id.btnHoraAtencion);
         btnHoraAtencion.setOnClickListener(this);
 
+        btnCamara =  getView().findViewById(R.id.camera_button);
+        btnCamara.setOnClickListener(this);
+
         cedulaEdit = getView().findViewById(R.id.editTextCedula);
         nombreEdit = getView().findViewById(R.id.editTextNombreMonitor);
         nombreUsuarioEdit = getView().findViewById(R.id.editTextNombreUsuario);
@@ -69,6 +87,7 @@ public class AgregarMonitorFragment extends DialogFragment implements View.OnCli
         semestreEdit = getView().findViewById(R.id.editTextSemestre);
         lineaMonitoriaEdit = getView().findViewById(R.id.editTextLineaMonitoria);
         lugarAtencionEdit = getView().findViewById(R.id.editTextLugarAtencion);
+        imageView = getView().findViewById(R.id.imagen);
 
 
     }
@@ -112,6 +131,10 @@ public class AgregarMonitorFragment extends DialogFragment implements View.OnCli
 
         }
 
+        if (view.getId() == btnCamara.getId()){
+            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(cameraIntent, CAMERA_REQUEST);
+        }
     }
 
     @Override
@@ -126,9 +149,6 @@ public class AgregarMonitorFragment extends DialogFragment implements View.OnCli
         }
 
     }
-
-
-
 
     public ArrayList<Monitor> getLista() {
         return lista;
