@@ -33,6 +33,7 @@ public class DetalleCitaActivity extends AppCompatActivity {
             }
         });
 
+
         Citas cita = (Citas) getIntent().getExtras().get("citas");
         citaFragment.setPosicion(posicion_cita);
         citaFragment.mostrarCita(cita);

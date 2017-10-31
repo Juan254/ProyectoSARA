@@ -13,12 +13,12 @@ public class Monitor implements Parcelable {
 
     private int cedula, numTelefono, semestre, horaInicio, horaFin;
     private String nombre, nombreUsuario, contrasenia, lugarAtencion, lineaMonitoria;
-    private ArrayList<Cita> listaCitas;
+    private ArrayList<Citas> listaCitas;
     private boolean flagOcupado;
 
     public Monitor(int cedula, int numTelefono, int semestre, int horaInicio, int horaFin, String nombre,
                    String nombreUsuario, String contrasenia, String lugarAtencion, String lineaMonitoria,
-                   ArrayList<Cita> listaCitas, boolean flagOcupado) {
+                   ArrayList<Citas> listaCitas, boolean flagOcupado) {
         this.cedula = cedula;
         this.numTelefono = numTelefono;
         this.semestre = semestre;
@@ -45,7 +45,7 @@ public class Monitor implements Parcelable {
         contrasenia = in.readString();
         lugarAtencion = in.readString();
         lineaMonitoria = in.readString();
-        listaCitas = in.createTypedArrayList(Cita.CREATOR);
+        listaCitas = in.createTypedArrayList(Citas.CREATOR);
         flagOcupado = in.readByte() != 0;
 
     }
@@ -164,11 +164,11 @@ public class Monitor implements Parcelable {
         this.lineaMonitoria = lineaMonitoria;
     }
 
-    public ArrayList<Cita> getListaCitas() {
+    public ArrayList<Citas> getListaCitas() {
         return listaCitas;
     }
 
-    public void setListaCitas(ArrayList<Cita> listaCitas) {
+    public void setListaCitas(ArrayList<Citas> listaCitas) {
         this.listaCitas = listaCitas;
     }
 

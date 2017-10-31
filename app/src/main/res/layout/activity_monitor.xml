@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="co.edu.uniquindio.android.electiva.proyectosara.activity.MonitorActivity">
 
-    <include layout="@layout/toolbar"  />
+    <include layout="@layout/toolbar" />
 
     <fragment
         android:id= "@+id/fragmento_lista_monitores"

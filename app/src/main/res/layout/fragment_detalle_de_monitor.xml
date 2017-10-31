@@ -1,100 +1,112 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.edu.uniquindio.android.electiva.proyectosara.fragments.DetalleDeMonitorFragment">
+    tools:context="co.edu.uniquindio.android.electiva.proyectosara.fragments.DetalleDeMonitorFragment"
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <include layout="@layout/toolbar" android:id="@id/tool_bar"/>
-
-    <ImageView
-        android:id="@+id/imgViewFotoMonitor"
-        android:layout_width="160dp"
-        android:layout_height="180dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/saraadminlogo"
-        android:contentDescription="La foto del monitor"/>
-
-
-    <TextView
-        android:id="@+id/txtNombreMonitor"
-        android:layout_width="360dp"
-        android:layout_marginTop="270dp"
-        android:layout_gravity="center_horizontal"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorNegro"
-        android:textSize="20sp"
-        android:background="@drawable/marco"
-        android:hint="@string/nombre_monitor" />
+        android:padding="10dp"
+        android:paddingTop="10pt">
+
+        <ImageView
+            android:id="@+id/imgViewFotoMonitor"
+            android:layout_width="160dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/saraadminlogo"
+            android:contentDescription="La foto del monitor"
+            android:layout_marginBottom="10pt"/>
+
+        <TextView
+            android:id="@+id/txtNombreMonitor"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5pt"
+            android:layout_below="@+id/imgViewFotoMonitor"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/marco"
+            android:hint="@string/nombre_monitor"
+            android:textColor="@color/colorNegro"
+            android:textSize="20sp" />
 
 
-    <TextView
-        android:id="@+id/txtNombreUsuario"
-        android:layout_width="360dp"
-        android:layout_marginTop="310dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorNegro"
-        android:textSize="20sp"
-        android:background="@drawable/marco"
-        android:hint="@string/nombre_usuario_monitor" />
+        <TextView
+            android:id="@+id/txtNombreUsuario"
+            android:layout_width="360dp"
+            android:layout_marginBottom="5pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorNegro"
+            android:textSize="20sp"
+            android:background="@drawable/marco"
+            android:hint="@string/nombre_usuario_monitor"
+            android:layout_below="@id/txtNombreMonitor"/>
 
-    <TextView
-        android:id="@+id/txtTelefono"
-        android:layout_width="360dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="350dp"
-        android:textColor="@color/colorNegro"
-        android:textSize="20sp"
-        android:background="@drawable/marco"
-        android:layout_height="wrap_content"
-        android:hint="@string/telefono_monitor" />
+        <TextView
+            android:id="@+id/txtTelefono"
+            android:layout_width="360dp"
+            android:layout_marginBottom="5pt"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorNegro"
+            android:textSize="20sp"
+            android:background="@drawable/marco"
+            android:layout_height="wrap_content"
+            android:hint="@string/telefono_monitor"
+            android:layout_below="@id/txtNombreUsuario"/>
 
-    <TextView
-        android:id="@+id/txtSemestre"
-        android:layout_width="360dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="390dp"
-        android:textColor="@color/colorNegro"
-        android:textSize="20sp"
-        android:background="@drawable/marco"
-        android:hint="@string/semestre_monitor" />
-
-
-    <TextView
-        android:id="@+id/txtLineaMonitoria"
-        android:layout_width="360dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="430dp"
-        android:textColor="@color/colorNegro"
-        android:textSize="20sp"
-        android:background="@drawable/marco"
-        android:hint="@string/ordenar_por_linea_monitoria" />
-
-    <TextView
-        android:id="@+id/txtLugarAtencion"
-        android:layout_width="360dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="470dp"
-        android:textColor="@color/colorNegro"
-        android:textSize="20sp"
-        android:background="@drawable/marco"
-        android:hint="@string/lugar_atencion" />
-
-    <TextView
-        android:id="@+id/txthoraAtencion"
-        android:layout_width="360dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="510dp"
-        android:textColor="@color/colorNegro"
-        android:textSize="20sp"
-        android:background="@drawable/marco"
-        android:hint="@string/hora_atencion" />
+        <TextView
+            android:id="@+id/txtSemestre"
+            android:layout_width="360dp"
+            android:layout_marginBottom="5pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorNegro"
+            android:textSize="20sp"
+            android:background="@drawable/marco"
+            android:hint="@string/semestre_monitor"
+            android:layout_below="@id/txtTelefono"/>
 
 
+        <TextView
+            android:id="@+id/txtLineaMonitoria"
+            android:layout_width="360dp"
+            android:layout_marginBottom="5pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorNegro"
+            android:textSize="20sp"
+            android:background="@drawable/marco"
+            android:hint="@string/ordenar_por_linea_monitoria"
+            android:layout_below="@id/txtSemestre"/>
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/txtLugarAtencion"
+            android:layout_width="360dp"
+            android:layout_marginBottom="5pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorNegro"
+            android:textSize="20sp"
+            android:background="@drawable/marco"
+            android:hint="@string/lugar_atencion"
+            android:layout_below="@id/txtLineaMonitoria"/>
+
+        <TextView
+            android:id="@+id/txthoraAtencion"
+            android:layout_width="360dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorNegro"
+            android:textSize="20sp"
+            android:background="@drawable/marco"
+            android:hint="@string/hora_atencion"
+            android:layout_below="@id/txtLugarAtencion"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

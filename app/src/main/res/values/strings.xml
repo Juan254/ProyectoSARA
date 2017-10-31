@@ -35,6 +35,8 @@
     <string name="lugar_atencion">Lugar de atención</string>
     <string name="descripcion_camera">Imagen para capturar la foto del monitor</string>
     <string name="mensaje_agregar_error">Debe de llenar todos los campos, son obligatorios</string>
+    <string name="detalle_monitor">Detalle del monitor</string>
+    <string name="agregar_cita">Agregar Cita</string>
 
 
     <string-array name="estados">

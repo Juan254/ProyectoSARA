@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.MonitorActivity" />
-        <activity android:name=".activity.DetalleDeMonitorActivity"></activity>
+        <activity android:name=".activity.DetalleDeMonitorActivity" />
+        <activity android:name=".activity.CitaActivity" />
+        <activity android:name=".activity.MonitorViewPagerActivity"></activity>
     </application>
 
 </manifest>
