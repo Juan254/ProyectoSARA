@@ -37,6 +37,11 @@
     <string name="mensaje_agregar_error">Debe de llenar todos los campos, son obligatorios</string>
     <string name="detalle_monitor">Detalle del monitor</string>
     <string name="agregar_cita">Agregar Cita</string>
+    <string name="compartir_en_redes">Compartir perfil en:</string>
+    <string name="cedula_estudiante">Cédula del estudiante</string>
+    <string name="nombre_estudiante">Nombre del estudiante</string>
+    <string name="linea_monitoria">Línea del monitoria</string>
+    <string name="crear_cita">Agregar cita</string>
 
 
     <string-array name="estados">

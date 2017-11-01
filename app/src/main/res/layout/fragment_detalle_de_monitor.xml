@@ -6,11 +6,16 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <RelativeLayout
+
+    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:paddingTop="10pt">
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingTop="10pt">
 
         <ImageView
             android:id="@+id/imgViewFotoMonitor"
@@ -105,8 +110,61 @@
             android:textSize="20sp"
             android:background="@drawable/marco"
             android:hint="@string/hora_atencion"
-            android:layout_below="@id/txtLugarAtencion"/>
+            android:layout_below="@id/txtLugarAtencion"
+            android:layout_marginBottom="7pt"/>
 
-    </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtCompartirRedes"
+            android:layout_width="360dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorNegro"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="3pt"
+            android:hint="@string/compartir_en_redes"
+            android:layout_below="@id/txthoraAtencion"/>
+
+
+        <ImageButton
+            android:id="@+id/btnTwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCompartirRedes"
+            android:background="@drawable/twitter_icon"
+            android:layout_centerHorizontal="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:elevation="10pt"/>
+
+        <ImageButton
+            android:id="@+id/btnFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCompartirRedes"
+            android:background="@drawable/facebook_icon"
+            android:layout_alignParentEnd="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:elevation="10pt"/>
+
+        <ImageButton
+            android:id="@+id/btnGPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/txtCompartirRedes"
+            android:background="@drawable/gplus_icon"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:elevation="10pt"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
 
 </LinearLayout>

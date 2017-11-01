@@ -6,9 +6,11 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import co.edu.uniquindio.android.electiva.proyectosara.R;
+import co.edu.uniquindio.android.electiva.proyectosara.fragments.AgregarCitaFragment;
 import co.edu.uniquindio.android.electiva.proyectosara.util.AdaptadorDePager;
 import co.edu.uniquindio.android.electiva.proyectosara.vo.Monitor;
 
@@ -45,5 +47,24 @@ public class MonitorViewPagerActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_detalle_monitor, menu);
         return true;
+    }
+
+    public void mostrarDialogoAgregarCita(String nombreClase){
+        AgregarCitaFragment dialogo = new AgregarCitaFragment();
+        dialogo.setStyle(dialogo.STYLE_NORMAL, R.style.DialogoTitulo);
+        dialogo.show(getSupportFragmentManager(), nombreClase);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if(id == R.id.menu_agregar_cita){
+
+            mostrarDialogoAgregarCita(MonitorViewPagerActivity.class.getName());
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
